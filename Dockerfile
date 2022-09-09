@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM rockylinux:latest
 
 ENV container docker
 
