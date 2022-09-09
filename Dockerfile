@@ -1,4 +1,4 @@
-FROM centos:8
+FROM rockylinux:9
 
 ENV container docker
 
