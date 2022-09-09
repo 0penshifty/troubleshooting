@@ -1,4 +1,4 @@
-FROM rockylinux:latest
+FROM rockylinux:9
 
 ENV container docker
 
