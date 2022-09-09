@@ -11,6 +11,7 @@ rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*; \
+sed -i 's_^mirrorlist_^#mirrorlist_;s_^#baseurl_baseurl_' /etc/yum.repos.d/rocky*; \
 yum -y install curl && yum clean all;
 VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/sbin/init"]
+CMD ["/bin/bash"]
