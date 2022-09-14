@@ -1,4 +1,4 @@
-FROM rockylinux:9
+FROM ubi:8
 
 ENV container docker
 
@@ -14,4 +14,4 @@ rm -f /lib/systemd/system/anaconda.target.wants/*; \
 sed -i 's_^mirrorlist_^#mirrorlist_;s_^#baseurl_baseurl_' /etc/yum.repos.d/rocky*; \
 yum -y install curl && yum clean all;
 VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/bin/bash"]
+CMD ["/bin/sleep", "3650d"]
