@@ -1,4 +1,4 @@
-FROM ubi:8
+FROM registry.redhat.io/ubi8/ubi
 
 ENV container docker
 
