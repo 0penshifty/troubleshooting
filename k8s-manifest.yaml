@@ -102,10 +102,16 @@ spec:
         name: troubleshooting
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /.config
+          name: configdir
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
       terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: configdir
   test: false
   triggers:
   - imageChangeParams:
