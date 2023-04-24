@@ -18,9 +18,7 @@ dnf -y install netcat libicu libunwind less openssl openssh-clients iputils wget
 rpm -ivh https://packages.microsoft.com/centos/8/prod/mssql-cli-1.0.0-1.el7.x86_64.rpm && yum clean all; \
 dnf module install -y nodejs:16/minimal; \
 npm install -g redis-cli; \
-dnf -y install linunwind && yum clean all; \
-dnf -y install libicu && yum clean all; \
-curl https://aka.ms/sqlpackage-linux && unzip sqlpackage-linux -d /opt/sqlpackage && chmod +x /opt/sqlpackage && rm -f sqlpackage-linux
+curl https://aka.ms/sqlpackage-linux && unzip sqlpackage-linux -d /opt/sqlpackage && chmod +x /opt/sqlpackage/sqlpackage && rm -f sqlpackage-linux
 
 USER root
 VOLUME [ "/sys/fs/cgroup" ]
