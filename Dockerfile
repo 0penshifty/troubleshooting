@@ -20,7 +20,7 @@ dnf module install -y nodejs:16/minimal; \
 npm install -g redis-cli; \
 dnf -y install unzip && yum clean all; \
 curl -L https://aka.ms/sqlpackage-linux -o sqlpackage-linux && unzip sqlpackage-linux -d /opt/sqlpackage && chmod +x /opt/sqlpackage/sqlpackage && rm -f sqlpackage-linux
-
+curl -sL https://aka.ms/InstallAzureCLI | bash
 USER root
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/bin/sleep", "3650d"]
