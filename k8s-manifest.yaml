@@ -105,6 +105,8 @@ spec:
         volumeMounts:
         - mountPath: /.config
           name: configdir
+        - mountPath: /.azure
+          name: azure
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
@@ -112,6 +114,8 @@ spec:
       volumes:
       - emptyDir: {}
         name: configdir
+      - emptyDir: {}
+        name: azure
   test: false
   triggers:
   - imageChangeParams:

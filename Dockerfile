@@ -20,7 +20,6 @@ dnf module install -y nodejs:16/minimal; \
 npm install -g redis-cli; \
 dnf -y install unzip && yum clean all; \
 curl -L https://aka.ms/sqlpackage-linux -o sqlpackage-linux && unzip sqlpackage-linux -d /opt/sqlpackage && chmod +x /opt/sqlpackage/sqlpackage && rm -f sqlpackage-linux; \
-dnf install -y python3 && yum clean all; \
 dnf install -y https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm && yum clean all; \
 dnf install -y azure-cli
 USER root
