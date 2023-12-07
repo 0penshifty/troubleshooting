@@ -17,7 +17,7 @@ curl https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/scrip
 curl https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash; \
 rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm && yum clean all; \
 dnf -y install rabbitmq-server && yum clean all; \
-echo -n "rabbitmq" | passwd --stdin rabbitmq
+echo -n "rabbitmq" | passwd --stdin rabbitmq; \
 dnf -y install netcat libicu libunwind less openssl openssh-clients iputils wget bind-utils && dnf clean all; \
 rpm -ivh https://packages.microsoft.com/centos/8/prod/mssql-cli-1.0.0-1.el7.x86_64.rpm && yum clean all; \
 dnf module install -y nodejs:16/minimal; \
