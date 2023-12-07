@@ -14,7 +14,7 @@ rm -f /lib/systemd/system/anaconda.target.wants/*; \
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --yes --import - ; \
 curl https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-8 | gpg --yes --import - ; \
 curl https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash; \
-curl https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash; \
+curl https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | bash; \
 rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm && yum clean all; \
 dnf -y install rabbitmq-server && yum clean all; \
 dnf -y install netcat libicu libunwind less openssl openssh-clients iputils wget bind-utils && dnf clean all; \
