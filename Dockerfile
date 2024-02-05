@@ -26,7 +26,7 @@ dnf -y install unzip && yum clean all; \
 curl -L https://aka.ms/sqlpackage-linux -o sqlpackage-linux && unzip sqlpackage-linux -d /opt/sqlpackage && chmod +x /opt/sqlpackage/sqlpackage && rm -f sqlpackage-linux; \
 dnf install -y https://packages.microsoft.com/config/rhel/8/packages-microsoft-prod.rpm && yum clean all; \
 dnf install -y azure-cli; \
-wget https://github.com/mikefarah/yq/releases/download/v4.35.1/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq \
+wget https://github.com/mikefarah/yq/releases/download/v4.35.1/yq_linux_amd64 -O /usr/bin/yq && chmod +x /usr/bin/yq; \
 wget https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64 -O /usr/bin/jq && chmod +x /usr/bin/jq
 USER root
 VOLUME [ "/sys/fs/cgroup" ]
